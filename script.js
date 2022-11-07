@@ -1,17 +1,16 @@
-let calcBtns = document.querySelectorAll('.calc-button');
-let calcDisplay = document.querySelector('.display');
-let calcInput = document.querySelector('.calc-input');
+let firstOperand = ''
+let secondOperand = ''
+let currentOperation = null
+let shouldResetScreen = false
+
+const numberButtons = document.querySelectorAll('[data-number]');
+const operatorButtons = document.querySelectorAll('[data-operator]');
+const equalsButton = document.getElementById('equalsBtn');
+const clearButton = document.getElementById('clearBtn');
+const deleteButton = document.getElementById('deleteBtn');
+const pointButton = document.getElementById('pointBtn');
 
 
-
-function Clear(){
-}
-
-function Display(){
-}
-
-function Operate(){
-}
-
-
-
+operatorButtons.forEach(n=>{
+    n.addEventListener('click',()=>console.log(n.innerHTML))
+})

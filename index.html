@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,38 +8,45 @@
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
+
 <body>
     <div class="calculator">
-        <div class="display"></div>
-        <input class="calc-input" type="text" placeholder="0">
-        
+        <div class="display">
+            <div id="lastOperationDisplay">..</div>
+            <input id="currentOperationDisplay" class="calc-input" type="text" placeholder="0">
+        </div>
 
-        <div class="calc-buttons">
-            <button class="calc-button is-clear">C</button>
-            <button class="calc-button operator">÷</button>
 
-            <button class="calc-button operand">7</button>
-            <button class="calc-button operand">8</button>
-            <button class="calc-button operand">9</button>
-            <button class="calc-button operator">×</button>
+        <div class="buttons">
+            <!-- 1st row -->
+            <button value="C" class="btn btn-clear" id="clearBtn">CLEAR</button>
+            <button value="÷" class="btn btn-delete" id="deleteBtn">DELETE</button>
+            <!-- 2nd row -->
+            <button class="btn"  data-number>7</button>
+            <button class="btn"  data-number>8</button>
+            <button class="btn"  data-number>9</button>
+            <button class="btn"  data-operator>÷</button>
+            <!-- 3rd row -->
+            <button class="btn"  data-number>4</button>
+            <button class="btn"  data-number>5</button>
+            <button class="btn"  data-number>6</button>
+            <button class="btn"  data-operator>×</button>
+            <!-- 4th row -->
+            <button class="btn"  data-number>1</button>
+            <button class="btn"  data-number>2</button>
+            <button class="btn"  data-number>3</button>
+            <button class="btn"  data-operator>−</button>
+            <!-- 5th row -->
+            <button class="btn"  id="pointBtn">.</button>
+            <button class="btn"  data-number>0</button>
+            <button class="btn"  id="equalsBtn">=</button>
+            <button class="btn"  data-operator>+</button>
 
-            <button class="calc-button operand">4</button>
-            <button class="calc-button operand">5</button>
-            <button class="calc-button operand">6</button>
-            <button class="calc-button operator">-</button>
-
-            <button class="calc-button operand">1</button>
-            <button class="calc-button operand">2</button>
-            <button class="calc-button operand">3</button>
-            <button class="calc-button operator">+</button>
-
-            <button class="calc-button operand is-zero">0</button>
-            <button class="calc-button is-equals">=</button>
-          
         </div>
     </div>
 
 
     <script src="script.js"></script>
 </body>
+
 </html>
