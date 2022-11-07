@@ -9,7 +9,7 @@ body{
 
 .calculator{
     background-color: rgba(0,0,0, 0.4);
-    box-shadow: 0 0 5px .1px whitesmoke;
+    box-shadow: 0 0 2px .1px whitesmoke;
     max-width: 400px;
     margin: 0 auto;
     border-radius: 10px;
@@ -23,12 +23,12 @@ body{
     border: none;
     width: 100%;
     border-bottom: none;
-    padding: 20px;
+    padding: 5px 10px; 
     text-align: right;
 }
 
 .display{
-    font-size: 15px;
+    font-size: 20px;
     color: gray;
 }
 
@@ -42,47 +42,59 @@ input:focus{
     outline: none;
 }
 
-.calc-buttons{
-    padding: 20px;
+.buttons{
+    padding: 10px;
 
     /* grid stuff */
     display: grid;
     grid-template: repeat(5,1fr)/ repeat(4,1fr);
-    grid-gap: 5px;
+    grid-gap: 2px;
 
 }
 
-.calc-button{
+.btn{
     background: rgba(0, 0, 0, 0.425);
     border: 1px solid black;
     padding: 20px;
     color: whitesmoke;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 22px;
     cursor: pointer;
 }
 
-.calc-button:hover{
+.btn:hover{
     background: rgba(133, 124, 124, 0.514);
 }
 
-.is-clear, .is-zero{
-    grid-column: span 3;
+.btn:active{
+    filter: blur(1px);
+    background:rgb(25, 37, 63);
 }
 
-.is-clear{
+.btn-clear, .btn-delete{
+    grid-column: span 2;
+}
+
+.btn-clear{
     background: rgb(76, 76, 255);
 }
 
-.is-clear:hover{
+.btn-clear:hover{
     background: rgba(76, 76, 255, 0.514);;
 }
 
-.is-equals{
+.btn-delete{
+    background: rgb(226, 58, 58);
+}
+
+.btn-delete:hover{
+    background: rgba(189, 50, 50, 0.808);
+}
+
+#equalsBtn{
     background: rgb(65, 216, 65);
 }
 
-.is-equals:hover{
+#equalsBtn:hover{
     background: rgb(65, 216, 65, 0.5);
-
 }
